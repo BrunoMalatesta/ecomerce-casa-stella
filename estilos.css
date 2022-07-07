@@ -6,7 +6,7 @@
 
 body{
 
-  background-color: rgb(229, 240, 187);
+  background-color: rgb(234, 187, 240);
 }
 
 img {
@@ -188,6 +188,6 @@ p {
 .main-Productos{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: 12rem;
 }
