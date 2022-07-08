@@ -150,6 +150,8 @@ const actualizarCarrito = () => {
 
         contenedorCarrito.appendChild(div)
 
+        localStorage.setItem('carrito', JSON.stringify(carrito))
+
     })
     
     contadorCarrito.innerText = carrito.length
@@ -158,6 +160,14 @@ const actualizarCarrito = () => {
     precioTotal.innerText = carrito.reduce((acc, info) => acc + info.cantidad * info.precio, 0)
   
 };
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('carrito')){
+        carrito = JSON.parse(localStorage.getItem('carrito'))
+        actualizarCarrito()
+    }
+})
 
 
 /* ELIMINAR DEL CARRITO*/
