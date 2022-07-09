@@ -132,6 +132,7 @@ const agregarAlCarrito = (prodId) => {
 botonVaciar.addEventListener('click', () => {
     carrito.length = 0
     actualizarCarrito()
+    localStorage.removeItem('carrito', JSON.stringify(carrito))
 });
 
 
@@ -158,7 +159,7 @@ const actualizarCarrito = () => {
 
     console.log(carrito)
     precioTotal.innerText = carrito.reduce((acc, info) => acc + info.cantidad * info.precio, 0)
-  
+    
 };
 
 
