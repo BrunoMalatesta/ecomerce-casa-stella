@@ -16,9 +16,12 @@ img {
 
 .img-carrito{
   width: 10%;
-
+  transition: transform .2s;
 }
 
+.img-carrito:hover {
+  transform: scale(1.5); 
+}
 
 nav {
   display: flex;
@@ -35,7 +38,7 @@ nav {
 }
 
 .casastella{
-  width: auto;
+  width: 16%;
   border-radius: 50%;
 }
 
@@ -47,20 +50,16 @@ h1 {
 }
 
 #boton-carrito {
+  display: flex;
+  justify-content: flex-end;
   border: none;
   color: black;
   font-size: 40px;
   background-color: white;
-  padding: 10px 20px;
   background-color: rgb(232, 54, 23);
   transition: all .3s;
-}
-
-#boton-carrito:hover {
-  cursor: pointer;
-  color: white;
-  background-color: rgb(141, 39, 10);
-  border-radius: 100%;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 #boton-carrito:focus {
@@ -74,6 +73,7 @@ h1 {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 
 p {
   line-height: 1.8;
@@ -95,6 +95,14 @@ p {
 
 .boton-agregar {
   background-color: rgb(225, 65, 65);
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 5px;
+  border: none;
+}
+.boton-comprar{
+  background-color: rgb(28, 55, 190);
   color: white;
   font-size: 18px;
   font-weight: 700;
