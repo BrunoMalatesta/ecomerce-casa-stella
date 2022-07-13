@@ -80,7 +80,6 @@ p {
 }
 
 .producto {
-  max-width: 20%;
   padding: 10px;
   margin: 10px;
   margin-bottom: 20px;
@@ -88,6 +87,8 @@ p {
   background-color: #ffff;
   border-radius: 10px;
 }
+
+
 
 .precioProducto {
   font-weight: 700;
