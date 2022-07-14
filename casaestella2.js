@@ -2,7 +2,7 @@
 const lista_productos =[
     {
         id: 0,
-        img: "/productos/tijeras.jpg",
+        img: "./productos/tijeras.jpg",
         nombre: "Tijera",
         precio: 550,
         cantidad: 1,
@@ -10,7 +10,7 @@ const lista_productos =[
     },
     {
         id: 1,
-        img: "/productos/plasticola.jpg",
+        img: "./productos/plasticola.jpg",
         nombre: "Plasticola",
         precio: 200,
         cantidad: 1,
@@ -18,7 +18,7 @@ const lista_productos =[
     },
     {
         id: 2,
-        img: "/productos/lapicera.jpg",
+        img: "./productos/lapicera.jpg",
         nombre: "Lapicera",
         precio: 190,
         cantidad: 1,
@@ -26,7 +26,7 @@ const lista_productos =[
     },
     {
         id: 3,
-        img: "/productos/pinceles.jpg",          
+        img: "./productos/pinceles.jpg",          
         nombre: "Pinceles",
         precio: 400,
         cantidad: 1,
@@ -34,7 +34,7 @@ const lista_productos =[
     },
     {
         id: 4,
-        img:  "/productos/acrilicos.jpg",        
+        img:  "./productos/acrilicos.jpg",        
         nombre: "Acrilicos",
         precio: 2800,
         cantidad: 1,
@@ -42,7 +42,7 @@ const lista_productos =[
     },
     {
         id: 5,
-        img: "/productos/resma.jpg",     
+        img: "./productos/resma.jpg",     
         nombre: "Resma",
         precio: 890,
         cantidad: 1,
@@ -50,7 +50,7 @@ const lista_productos =[
     },
     {
         id: 6,
-        img: "/productos/lapiz.jpg",
+        img: "./productos/lapiz.jpg",
         nombre: "Lapiz",                             
         precio: 160,
         cantidad: 1,
@@ -58,7 +58,7 @@ const lista_productos =[
     },
     {
         id: 7,
-        img: "/productos/regla.jpg",
+        img: "./productos/regla.jpg",
         nombre: "Regla",
         precio: 330,
         cantidad: 1,
@@ -66,7 +66,7 @@ const lista_productos =[
     },
     {
         id: 8,
-        img: "/productos/mapa.jpg",
+        img: "./productos/mapa.jpg",
         nombre: "Mapa",
         precio: 50,
         cantidad: 1,
@@ -74,7 +74,7 @@ const lista_productos =[
     },
     {
         id: 9,
-        img: "/productos/goma.jpg",
+        img: "./productos/goma.jpg",
         nombre: "Goma Maped",
         precio: 180,
         cantidad: 1,
@@ -82,7 +82,7 @@ const lista_productos =[
     },
     {
         id: 10,
-        img: "/productos/mochila.jpg",
+        img: "./productos/mochila.jpg",
         nombre: "Mochila Verde Musgo",
         precio: 7699,
         cantidad: 1,
@@ -90,7 +90,7 @@ const lista_productos =[
     },
     {
         id: 11,
-        img: "/productos/mochila2.jpg",
+        img: "./productos/mochila2.jpg",
         nombre: "Mochila Wilson",
         precio: 6100,
         cantidad: 1,
@@ -98,7 +98,7 @@ const lista_productos =[
     },
     {
         id: 12,
-        img: "/productos/mochila3.jpg",
+        img: "./productos/mochila3.jpg",
         nombre: "Mochila Wilson Bicolor",
         precio: 6900,
         cantidad: 1,
@@ -106,7 +106,7 @@ const lista_productos =[
     },
     {
         id: 13,
-        img: "/productos/billetera.jpg",
+        img: "./productos/billetera.jpg",
         nombre: "Billetera Hombre Duogan",
         precio: 2980,
         cantidad: 1,
@@ -114,7 +114,7 @@ const lista_productos =[
     },
     {
         id: 14,
-        img: "/productos/billetera2.jpg",
+        img: "./productos/billetera2.jpg",
         nombre: "Billetera Hombre Duogan Eco Cuero",
         precio: 2980,
         cantidad: 1,
@@ -122,7 +122,7 @@ const lista_productos =[
     },
     {
         id: 15,
-        img: "/productos/billetera3.jpg",
+        img: "./productos/billetera3.jpg",
         nombre: "Billetera  PlayStation One",
         precio: 3000,
         cantidad: 1,
@@ -130,7 +130,7 @@ const lista_productos =[
     },
     {
         id: 16,
-        img: "/productos/cajalapicez.jpg",
+        img: "./productos/cajalapicez.jpg",
         nombre: "Lápíces De Colores Filgo",
         precio: 2500,
         cantidad: 1,
@@ -138,7 +138,7 @@ const lista_productos =[
     },
     {
         id: 17,
-        img: "/productos/sharpie.jpg",
+        img: "./productos/sharpie.jpg",
         nombre: "Marcador Sharpie",
         precio: 250,
         cantidad: 1,
@@ -146,7 +146,7 @@ const lista_productos =[
     },
     {
         id: 18,
-        img: "/productos/kit.jpg",
+        img: "./productos/kit.jpg",
         nombre: "Kit Set Utiles Escolares Gloria",
         precio: 1000,
         cantidad: 1,
@@ -154,7 +154,7 @@ const lista_productos =[
     },
     {
         id: 19,
-        img: "/productos/lapicescolores.jpg",
+        img: "./productos/lapicescolores.jpg",
         nombre: "Lapices Filgo Color",
         precio: 300,
         cantidad: 1,
@@ -162,7 +162,7 @@ const lista_productos =[
     },
     {
         id: 20,
-        img: "/productos/marcadorescolores.jpg",
+        img: "./productos/marcadorescolores.jpg",
         nombre: "20 Colores De Resaltador Filgo",
         precio: 1650,
         cantidad: 1,
@@ -170,7 +170,7 @@ const lista_productos =[
     },
     {
         id: 21,
-        img: "/productos/tintamarcador.jpg",
+        img: "./productos/tintamarcador.jpg",
         nombre:"Tinta Trabi 30 Ml",
         precio: 900,
         cantidad: 1,
@@ -178,7 +178,7 @@ const lista_productos =[
     },
     {
         id: 2,
-        img: "/productos/kit2.jpg",
+        img: "./productos/kit2.jpg",
         nombre: "Kit Utiles Escolares K26",
         precio: 2420,
         cantidad: 1,
@@ -186,7 +186,7 @@ const lista_productos =[
     },
     {
         id: 23,
-        img: "/productos/marcadorpizzarra.jpg",
+        img: "./productos/marcadorpizzarra.jpg",
         nombre: "Marcador Pizarra Negro Imantado",
         precio: 2100,
         cantidad: 1,
@@ -194,7 +194,7 @@ const lista_productos =[
     },
     {
         id: 24,
-        img: "/productos/plumaparker.jpg",
+        img: "./productos/plumaparker.jpg",
         nombre: "Boligrafo Parker Jotter Acero",
         precio: 4000,
         cantidad: 1,
@@ -202,7 +202,7 @@ const lista_productos =[
     },
     {
         id: 25,
-        img: "/productos/kitcolorcastell.jpg",
+        img: "./productos/kitcolorcastell.jpg",
         nombre: "Lapices De Color FaberCastell",
         precio: 6000,
         cantidad: 1,
@@ -210,7 +210,7 @@ const lista_productos =[
     },
     {
         id: 26,
-        img: "/productos/sello.jpg",
+        img: "./productos/sello.jpg",
         nombre: "Sellos Personalizados Automatico",
         precio: 800,
         cantidad: 11,
@@ -218,7 +218,7 @@ const lista_productos =[
     },
     {
         id: 27,
-        img: "/productos/cartulina.jpg",
+        img: "./productos/cartulina.jpg",
         nombre: "Papel Afiche 70 X 100 X 10 Unidades ",
         precio: 600,
         cantidad: 1,
@@ -226,7 +226,7 @@ const lista_productos =[
     },
     {
         id: 28,
-        img: "/productos/separadores.jpg",
+        img: "./productos/separadores.jpg",
         nombre: "Separador Cartulina A4",
         precio: 200,
         cantidad: 1,
@@ -234,7 +234,7 @@ const lista_productos =[
     },
     {
         id: 29,
-        img: "/productos/pizarra1.jpg",
+        img: "./productos/pizarra1.jpg",
         nombre: "Pizarra Blanca 60x80cm",
         precio: 3000,
         cantidad: 1,
@@ -242,7 +242,7 @@ const lista_productos =[
     },
     {
         id: 30,
-        img: "/productos/pizarra2.jpg",
+        img: "./productos/pizarra2.jpg",
         nombre: "Pizarra Blanca 80x120cm",
         precio: 6000,
         cantidad: 1,
