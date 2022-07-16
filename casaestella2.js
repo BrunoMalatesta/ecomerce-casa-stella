@@ -285,24 +285,14 @@ lista_productos.forEach((info) => {
 
 /* AGG AL CARRITO SIN QUE SE REPITA*/
 const agregarAlCarrito = (prodId) => {
+    let agregar_producto = lista_productos.find(prod => prod.id == prodId)
+    let existe = carrito.some(prod => prod.id === prodId)
 
-    const existe = carrito.some (prod => prod.id === prodId) 
-
-    if (existe){ 
-        const prod = carrito.map (prod => {
-            if (prod.id === prodId){
-                prod.cantidad++
-            }
-        })
-    } else { 
-        const item = lista_productos.find((prod) => prod.id === prodId)
-        carrito.push(item)
-    }
+    existe == true ? agregar_producto.cantidad++ : carrito.push(agregar_producto); //reducimos un if a la nomenclatura de operador ternario
 
     actualizarCarrito() 
 
 };
-
 
 /*VACIAR CARRITO*/
 botonVaciar.addEventListener('click', () => {
