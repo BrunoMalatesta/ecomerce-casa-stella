@@ -297,8 +297,8 @@ const agregarAlCarrito = (prodId) => {
 /*VACIAR CARRITO*/
 botonVaciar.addEventListener('click', () => {
     carrito.length = 0
-    actualizarCarrito()
     localStorage.removeItem('carrito', JSON.stringify(carrito))
+    actualizarCarrito()
 });
 
 
