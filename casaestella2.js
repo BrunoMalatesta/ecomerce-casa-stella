@@ -177,7 +177,7 @@ const lista_productos =[
         stock: 100,
     },
     {
-        id: 2,
+        id: 22,
         img: "./productos/kit2.jpg",
         nombre: "Kit Utiles Escolares K26",
         precio: 2420,
@@ -211,9 +211,9 @@ const lista_productos =[
     {
         id: 26,
         img: "./productos/sello.jpg",
-        nombre: "Sellos Personalizados Automatico",
+        nombre: "Sellos Personalizados",
         precio: 800,
-        cantidad: 11,
+        cantidad: 1,
         stock: 100,
     },
     {
@@ -296,7 +296,7 @@ const agregarAlCarrito = (prodId) => {
 
 /*VACIAR CARRITO*/
 botonVaciar.addEventListener('click', () => {
-    carrito.length = 0
+    carrito.length = 0,
     localStorage.removeItem('carrito', JSON.stringify(carrito))
     actualizarCarrito()
 });
@@ -336,18 +336,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 })
 
-
-/* ELIMINAR DEL CARRITO*/
+/* EliminardelCARRITO*/
 const eliminarDelCarrito = (infoId) => {
-    const item = carrito.find((info) => info.id === infoId)
+    const existe = carrito.some(prod => prod.id ===infoId)
+    if(existe){
+        const prod = carrito.map(prod => {
+            if(prod.id === infoId){
+                prod.cantidad = 1;
+                const item = carrito.find((info) => info.id === infoId)
+                const indice = carrito.indexOf(item) 
+                carrito.splice(indice, 1) 
+                actualizarCarrito()
+            }
+        })
 
-    const indice = carrito.indexOf(item) 
+    }
 
-    carrito.splice(indice, 1) 
+    else {
+        const item = lista_productos.find((prod) => prod.id === infoId)
+        carrito.push(item)
+    }
     
-    actualizarCarrito()
-  
-    console.log(carrito)
 };
 
 
