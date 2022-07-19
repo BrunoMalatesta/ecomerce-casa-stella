@@ -1,6 +1,5 @@
-
 /* ARRAY PRODUCTOS*/
-let lista_productos =[
+const lista_productos =[
     {
         id: 0,
         img: "./productos/tijeras.jpg",
@@ -356,21 +355,11 @@ const eliminarDelCarrito = (infoId) => {
 
 /*VACIAR CARRITO*/
 botonVaciar.addEventListener('click', () => {
-    eliminarDelCarrito.parentElement.remove();
-    carrito = carrito.filter(elemento => elemento.id != lista_productos.id)
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-    precioTotal.innerText = array_carrito.reduce((acc, info) => acc + info.cantidad * info.precio, 0);
-    actualizarCarrito();
+
+    location.reload();
+   
+    localStorage.removeItem('carrito', JSON.stringify(carrito))
 });
- 
-
-eliminarDelCarrito.parentElement.remove();
-carrito = carrito.filter(elemento => elemento.id != lista_productos.id)
-localStorage.setItem('carrito', JSON.stringify(carrito));
-precioTotal.innerText = array_carrito.reduce((acc, info) => acc + info.cantidad * info.precio, 0);
-actualizarCarrito();
-
-
 
 
 /* CODIGO DEL MODAL*/
