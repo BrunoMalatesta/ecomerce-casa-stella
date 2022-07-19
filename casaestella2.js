@@ -315,7 +315,7 @@ const actualizarCarrito = () => {
 
     })
     
-    contadorCarrito.innerText = carrito.length
+    
 
     console.log(carrito)
     precioTotal.innerText = carrito.reduce((acc, info) => acc + info.cantidad * info.precio, 0)
@@ -355,9 +355,8 @@ const eliminarDelCarrito = (infoId) => {
 
 /*VACIAR CARRITO*/
 botonVaciar.addEventListener('click', () => {
-    carrito.length = 0,
-   
-    actualizarCarrito()
+
+    location.reload();
    
     localStorage.removeItem('carrito', JSON.stringify(carrito))
 });
