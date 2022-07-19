@@ -294,13 +294,7 @@ const agregarAlCarrito = (prodId) => {
 
 };
 
-/*VACIAR CARRITO*/
-botonVaciar.addEventListener('click', () => {
-    carrito.length = 0,
-    localStorage.removeItem('carrito', JSON.stringify(carrito))
-    actualizarCarrito()
-});
-
+contadorCarrito
 
 /* ACTUALIZAR CARRITO*/
 const actualizarCarrito = () => {
@@ -321,7 +315,7 @@ const actualizarCarrito = () => {
 
     })
     
-    contadorCarrito.innerText = carrito.length
+   
 
     console.log(carrito)
     precioTotal.innerText = carrito.reduce((acc, info) => acc + info.cantidad * info.precio, 0)
@@ -358,6 +352,15 @@ const eliminarDelCarrito = (infoId) => {
     }
     
 };
+
+/*VACIAR CARRITO*/
+botonVaciar.addEventListener('click', () => {
+    carrito.length = 0,
+   
+    actualizarCarrito()
+   
+    localStorage.removeItem('carrito', JSON.stringify(carrito))
+});
 
 
 /* CODIGO DEL MODAL*/
