@@ -1,5 +1,6 @@
+
 /* ARRAY PRODUCTOS*/
-const lista_productos =[
+let lista_productos =[
     {
         id: 0,
         img: "./productos/tijeras.jpg",
@@ -315,7 +316,7 @@ const actualizarCarrito = () => {
 
     })
     
-    contadorCarrito.innerText = carrito.length
+    
 
     console.log(carrito)
     precioTotal.innerText = carrito.reduce((acc, info) => acc + info.cantidad * info.precio, 0)
@@ -355,12 +356,21 @@ const eliminarDelCarrito = (infoId) => {
 
 /*VACIAR CARRITO*/
 botonVaciar.addEventListener('click', () => {
-    carrito.length = 0,
-   
-    actualizarCarrito()
-   
-    localStorage.removeItem('carrito', JSON.stringify(carrito))
+    eliminarDelCarrito.parentElement.remove();
+    carrito = carrito.filter(elemento => elemento.id != lista_productos.id)
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    precioTotal.innerText = array_carrito.reduce((acc, info) => acc + info.cantidad * info.precio, 0);
+    actualizarCarrito();
 });
+ 
+
+eliminarDelCarrito.parentElement.remove();
+carrito = carrito.filter(elemento => elemento.id != lista_productos.id)
+localStorage.setItem('carrito', JSON.stringify(carrito));
+precioTotal.innerText = array_carrito.reduce((acc, info) => acc + info.cantidad * info.precio, 0);
+actualizarCarrito();
+
+
 
 
 /* CODIGO DEL MODAL*/
