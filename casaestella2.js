@@ -294,7 +294,7 @@ const agregarAlCarrito = (prodId) => {
 
 };
 
-contadorCarrito
+
 
 /* ACTUALIZAR CARRITO*/
 const actualizarCarrito = () => {
@@ -315,7 +315,7 @@ const actualizarCarrito = () => {
 
     })
     
-   
+    contadorCarrito.innerText = carrito.length
 
     console.log(carrito)
     precioTotal.innerText = carrito.reduce((acc, info) => acc + info.cantidad * info.precio, 0)
