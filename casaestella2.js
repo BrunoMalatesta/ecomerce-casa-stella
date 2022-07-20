@@ -163,7 +163,7 @@ const lista_productos =[
     {
         id: 20,
         img: "./productos/marcadorescolores.jpg",
-        nombre: "20 Colores De Resaltador Filgo",
+        nombre: "Colores De Resaltador Filgo",
         precio: 1650,
         cantidad: 1,
         stock: 100,
@@ -259,9 +259,9 @@ let carrito = [];
 let contenedorCarrito = document.getElementById('carrito-contenedor')
 let contenedorProductos = document.getElementById('contenedor-Productos')
 let contadorCarrito = document.getElementById('contadorCarrito')
-const botonVaciar = document.getElementById('vaciar-carrito')
-
-
+let botonVaciar = document.getElementById('vaciar-carrito')
+let botonComprar = document.getElementById('comprar-carrito')
+let botonTachito = document.getElementsByClassName('boton-eliminar')       
 /* INJECTAR PRODUCTOS*/
 lista_productos.forEach((info) => {
 
@@ -279,6 +279,20 @@ lista_productos.forEach((info) => {
 
     boton.addEventListener('click', () => {
         agregarAlCarrito(info.id)
+        Toastify({
+            text: "Se agrego al Carrito",
+            duration: 2000,
+            destination: "https://github.com/apvarun/toastify-js",
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "blue",
+            },
+            onClick: function(){} // Callback after click
+          }).showToast();
     })
 });
 
@@ -342,8 +356,23 @@ const eliminarDelCarrito = (infoId) => {
                 carrito.splice(indice, 1) 
                 actualizarCarrito()
             }
-        })
 
+            Toastify({
+                text: "Producto Eliminado",
+                duration: 2000,
+                destination: "https://github.com/apvarun/toastify-js",
+                newWindow: true,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                  background: "red",
+                },
+                onClick: function(){} // Callback after click
+              }).showToast();
+        })
+     
     }
 
     else {
@@ -353,6 +382,10 @@ const eliminarDelCarrito = (infoId) => {
     
 };
 
+
+
+
+
 /*VACIAR CARRITO*/
 botonVaciar.addEventListener('click', () => {
 
@@ -361,6 +394,47 @@ botonVaciar.addEventListener('click', () => {
     localStorage.removeItem('carrito', JSON.stringify(carrito))
 });
 
+
+
+/*VACIAR CARRITO*/
+botonComprar.addEventListener('click', () => {
+    
+const swalWithBootstrapButtons = Swal.mixin({
+    customClass: {
+      confirmButton: 'btn btn-success',
+      cancelButton: 'btn btn-danger'
+    },
+    buttonsStyling: false
+  })
+  
+  swalWithBootstrapButtons.fire({
+    title: 'Confirmar Compra?',
+    text: "no puede cancelar si confirmar!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Confirmar',
+    cancelButtonText: 'Cancelar',
+    reverseButtons: true
+  }).then((result) => {
+    if (result.isConfirmed) {
+      swalWithBootstrapButtons.fire(
+        'Compra Confirmada',
+        'se realizo la compra :)',
+        'success'
+      )
+    } else if (
+      /* Read more about handling dismissals below */
+      result.dismiss === Swal.DismissReason.cancel
+    ) {
+      swalWithBootstrapButtons.fire(
+        'Compra Cancelada',
+        'cancelo su compra :(',
+        'error'
+      )
+    }
+  })
+
+});
 
 /* CODIGO DEL MODAL*/
 const contenedorModal = document.getElementsByClassName('modal-contenedor')[0]
@@ -383,3 +457,22 @@ contenedorModal.addEventListener('click', (event) =>{
 modalCarrito.addEventListener('click', (event) => {
     event.stopPropagation() 
 });
+
+
+
+
+
+  anime({
+    targets: '.producto',
+    scale: [
+      {value: .6, easing: 'easeOutSine', duration: 500},
+      {value: 1, easing: 'easeInOutQuad', duration: 1200}
+    ],
+    delay: anime.stagger(200, {grid: [14, 5], from: 'center'})
+  });
+
+  anime({
+    targets: '.animated',
+    translateX: 2000,
+    easing: 'easeInOutExpo'
+  });

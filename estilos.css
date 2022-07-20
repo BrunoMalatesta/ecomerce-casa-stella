@@ -5,6 +5,7 @@
 }
 
 body{
+  position: relative;
   background: rgb(255,255,255);
   background: linear-gradient(90deg, rgba(255,255,255,1) 35%, rgba(228,16,16,1) 100%);
 }
@@ -31,10 +32,11 @@ nav {
   box-shadow: 0px 5px 4px 3px rgba(0, 0, 0, 0.3);
   margin-bottom: 20px;
   position: fixed;
-  left: 0;
+  left: -2000px;
   top: 0;
   width: 100%;
   background-color: rgb(232, 54, 23);
+  z-index: 2;
 }
 
 .casastella{
@@ -86,6 +88,7 @@ p {
   box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
   background-color: #ffff;
   border-radius: 10px;
+  z-index: 1;
 }
 
 
@@ -131,6 +134,7 @@ p {
   transition: all .5s;
   opacity: 0;
   visibility: hidden;
+  z-index: 2;
 }
 
 .modal-active {
