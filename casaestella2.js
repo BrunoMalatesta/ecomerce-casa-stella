@@ -386,16 +386,20 @@ const eliminarDelCarrito = (infoId) => {
 
 
 /*VACIAR CARRITO*/
-botonVaciar.addEventListener('click', () => {
 
-    location.reload();
-   
-    localStorage.removeItem('carrito', JSON.stringify(carrito))
+botonVaciar.addEventListener("click", () => {
+    localStorage.removeItem("carrito", JSON.stringify(carrito)),
+
+    contenedorCarrito.innerHTML = "",
+    
+    precioTotal.innerText = "0",
+  
+    carrito = []
+  
 });
 
 
-
-/*VACIAR CARRITO*/
+/*Boton Comprar*/
 botonComprar.addEventListener('click', () => {
     
 const swalWithBootstrapButtons = Swal.mixin({

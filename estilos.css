@@ -246,7 +246,16 @@ p {
   }
 
 .modal-contenedor{
-  width: auto;
+  width: 100%;
+}
+
+.modal-carrito {
+  position: relative;
+  background-color: white;
+  min-width: 320px;
+  padding: 20px;
+  margin-top: -100%;
+  transition: all .5s;
 }
 
 }
