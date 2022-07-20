@@ -19,7 +19,7 @@ form.addEventListener("submit", e=>{
         entrar = true
     }
     if(dire.value.length < 8){
-        warnings += `La contraseña no es valida <br>`
+        warnings += `La direccion no es valida <br>`
         entrar = true
     }
 

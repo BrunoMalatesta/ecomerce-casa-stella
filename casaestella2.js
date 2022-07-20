@@ -388,11 +388,11 @@ const eliminarDelCarrito = (infoId) => {
 /*VACIAR CARRITO*/
 
 botonVaciar.addEventListener("click", () => {
-    localStorage.removeItem("carrito", JSON.stringify(carrito)),
+    localStorage.removeItem('carrito', JSON.stringify(carrito)),
 
     contenedorCarrito.innerHTML = "",
     
-    precioTotal.innerText = "0",
+    precioTotal.innerText = 0,
   
     carrito = []
   
