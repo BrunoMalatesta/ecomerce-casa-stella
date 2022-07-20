@@ -360,7 +360,6 @@ const eliminarDelCarrito = (infoId) => {
             Toastify({
                 text: "Producto Eliminado",
                 duration: 2000,
-                destination: "https://github.com/apvarun/toastify-js",
                 newWindow: true,
                 close: true,
                 gravity: "top", // `top` or `bottom`
@@ -409,7 +408,7 @@ const swalWithBootstrapButtons = Swal.mixin({
   
   swalWithBootstrapButtons.fire({
     title: 'Confirmar Compra?',
-    text: "no puede cancelar si confirmar!",
+    text: "no puede cancelar si confirma!",
     icon: 'warning',
     showCancelButton: true,
     confirmButtonText: 'Confirmar',
