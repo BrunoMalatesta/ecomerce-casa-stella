@@ -8,6 +8,7 @@ body{
   position: relative;
   background: rgb(255,255,255);
   background: linear-gradient(90deg, rgba(255,255,255,1) 35%, rgba(228,16,16,1) 100%);
+  font-family: 'Pacifico', cursive;
 }
 
 img {
