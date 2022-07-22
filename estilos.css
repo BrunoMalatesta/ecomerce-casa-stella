@@ -16,7 +16,7 @@ img {
 }
 
 .img-carrito{
-  width: 10%;
+  width: 25%;
   transition: transform .2s;
 }
 
@@ -211,9 +211,13 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 20rem;
+  padding-top: 3rem;
 }
 
+.contacto{
+  color: #ffff;
+  padding-left: 30px;
+}
 
 
 
